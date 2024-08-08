@@ -150,28 +150,13 @@ window.Alpine = Alpine;
 Alpine.start();
 ```
 
-### NPM
-
-Add helper scripts to `package.json`:
-
-```json
-"scripts": {
-    "dev": "npm run development",
-    "development": "mix",
-    "watch": "mix watch",
-    "hot": "mix watch --hot",
-    "prod": "npm run production",
-    "production": "mix --production"
-}
-```
+## Compile & Run
 
 Compile assets:
 
 ```sh
 npm install && npm run dev
 ```
-
-## Run
 
 Serve the application using Laravel's built-in server:
 

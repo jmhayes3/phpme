@@ -181,3 +181,10 @@ php artisan serve
 
 Navigate to http://localhost:8000!
 
+## Notes
+
+If laravel-mix is not installed by default, run:
+
+```sh
+npm install laravel-mix --save-deps
+```

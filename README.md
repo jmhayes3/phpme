@@ -94,3 +94,90 @@ Update `resources/css/app.css` to include Tailwind directives:
 
 ### Livewire
 
+Install:
+
+```sh
+composer require livewire/livewire
+```
+
+Add Livewire's JavaScript library and styles to `resources/views/layouts/app.blade.php` file:
+```php
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Laravel</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
+
+    @livewireStyles
+</head>
+<body>
+    <div id="app">
+        @yield('content')
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{ mix('js/app.js') }}" defer></script>
+
+    @livewireScripts
+</body>
+</html>
+```
+
+### Alpine
+
+Install:
+
+```sh
+npm install alpinejs
+```
+
+Add Alpine.js to `resources/js/app.js` file:
+
+```js
+require('./bootstrap');
+import Alpine from 'alpinejs';
+
+window.Alpine = Alpine;
+
+Alpine.start();
+```
+
+### NPM
+
+Add helper scripts to `package.json`:
+
+```json
+"scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production"
+}
+```
+
+Compile assets:
+
+```sh
+npm install && npm run dev
+```
+
+## Run
+
+Serve the application using Laravel's built-in server:
+
+```sh
+php artisan serve
+```
+
+Navigate to http://localhost:8000!
+

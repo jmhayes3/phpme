@@ -35,8 +35,8 @@ sudo php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 Create new Laravel application:
 
 ```sh
-composer create-project --prefer-dist laravel/laravel tall-stack-app
-cd tall-stack-app
+composer create-project --prefer-dist laravel/laravel phpme
+cd phpme
 ```
 
 Setup env:
